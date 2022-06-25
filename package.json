@@ -1,0 +1,33 @@
+{
+  "name": "book-comet",
+  "version": "1.0.0",
+  "description": "Book Publisher and Inventory Management",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritik-ongraph/book-comet-api.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "JavaScript"
+  ],
+  "author": "Ritik_ongraph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritik-ongraph/book-comet-api/issues"
+  },
+  "homepage": "https://github.com/ritik-ongraph/book-comet-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
