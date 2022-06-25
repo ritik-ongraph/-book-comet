@@ -8,7 +8,8 @@
     "publisher": "publisher1",
     "yop": 2000,
     "summary": "summary1",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   },
   {
     "id": "1",
@@ -19,7 +20,8 @@
     "publisher": "publisher1",
     "yop": 2000,
     "summary": "summary1",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   },
   {
     "id": "3495eb73-9732-4d6b-8a43-9a6a0372f5a1",
@@ -30,7 +32,8 @@
     "publisher": "Microsoft Press; 1st edition",
     "yop": 2000,
     "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   },
   {
     "id": "915e42e2-7432-432f-933e-ef40eccdd5b1",
@@ -41,7 +44,8 @@
     "publisher": "Microsoft Press; 1st edition",
     "yop": 2000,
     "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   },
   {
     "id": "49daf472-6e8e-4a71-aae8-b090d37fdaf1",
@@ -52,7 +56,8 @@
     "publisher": "Microsoft Press; 1st edition",
     "yop": 2000,
     "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   },
   {
     "id": "4d1a3d47-401c-4c83-980f-d6d4d6ca1e78",
@@ -63,7 +68,8 @@
     "publisher": "Microsoft Press; 1st edition",
     "yop": 2000,
     "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   },
   {
     "id": "7c8092bc-964e-4c07-8be8-9a0504d4781a",
@@ -74,7 +80,8 @@
     "publisher": "Microsoft Press; 1st edition",
     "yop": 2000,
     "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   },
   {
     "id": "0ffcddcc-147c-4036-a501-b9906fc21e5b",
@@ -85,7 +92,8 @@
     "publisher": "Microsoft Press; 1st edition",
     "yop": 2000,
     "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   },
   {
     "id": "0b2ce68c-1c9b-46a7-bf9a-e3e0c8117e93",
@@ -96,17 +104,7 @@
     "publisher": "Microsoft Press; 1st edition",
     "yop": 2000,
     "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
-  },
-  {
-    "id": "9e753f93-3027-48fe-a937-48753968cf89",
-    "name": "Code1: The Hidden Langukdgsdsdage of Computer Hardware and Software",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
+    "format": "Ebook",
+    "qty": 0
   }
 ]

@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const path = require("path");
-// save Book Data to file
+// It save Books Data to file
 const saveBookData = (data) => {
     return new Promise((resolve,reject)=>{
        try {
@@ -31,7 +31,6 @@ const saveBookToInventory = (data) => {
 //get the Book data from json file
 const getBookData = () => {
 return new Promise((resolve,reject)=>{
-    console.log("getBookData");
     try {
         const jsonData = fs.readFileSync(path.resolve(__dirname, '../db/books.json'),'utf-8');
         let booksModelData = JSON.parse(jsonData);
@@ -57,7 +56,7 @@ return new Promise((resolve,reject)=>{
 
 
 
-//get the Book data from json file
+//get the Book Inventory data from json file
 const getBooksInventoryData = () => {
     return new Promise((resolve,reject)=>{
         console.log("getBookData");
