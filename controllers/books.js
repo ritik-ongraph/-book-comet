@@ -22,8 +22,9 @@ const getAllBooks = async (req, res) => {
     }
 }
 const addBooks = async (req, res) => {
+    console.log(req.body);
     try {
-        req.body.id = uuid();
+        const validBook = ['id', 'name', 'authors', 'publisher', 'yop', 'summary', 'format'];
         if (req.body && req.body.qty < 0) {
             throw new Error('Book Inventory cannot be negative');
         }

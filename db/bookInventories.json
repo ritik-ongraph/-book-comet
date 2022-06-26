@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "bb3e896b-07fb-4323-8b61-aab00e1d8576",
+    "bookId": "22d38613-af81-4d4c-974d-4fdd63942c46",
+    "qty": 0
+  },
+  {
+    "id": "473df33b-bd2c-4af1-8f11-a2632c473f7d",
+    "bookId": "a02d3727-9ba0-464f-ba69-dd82cb050fec",
+    "qty": 0
+  },
+  {
+    "id": "67bc3493-262a-43ec-955a-e8aba16fd3ef",
+    "bookId": "2230a965-c6a9-46f4-8d8f-90d77bd8cd2c",
+    "qty": 0
+  },
+  {
+    "id": "b70f4d88-cbb3-423e-9198-1fd2b1e52d0e",
+    "bookId": "f164342e-64bf-4797-82e3-c24fc1e1cd37",
+    "qty": 0
+  }
+]

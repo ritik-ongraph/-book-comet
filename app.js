@@ -13,10 +13,12 @@ app.use(express.json());
 const loggerMiddleware = require('./middleware/logger')
 
 const booksRoutes =require('./routes/books');
+const bookInventoryRoutes=require('./routes/bookInventories');
 
 //Versioning  API 
 app.use(loggerMiddleware.logger);
 app.use('/api/v1',booksRoutes);
+app.use('/api/v1',bookInventoryRoutes);
 
 app.use('*', ((req, res)=>{
 res.status(404).json({"error":404,"message":"Please check api endpoints"})

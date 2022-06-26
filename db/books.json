@@ -106,5 +106,64 @@
     "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
     "format": "Ebook",
     "qty": 0
+  },
+  {
+    "id": "22d38613-af81-4d4c-974d-4fdd63942c46",
+    "name": "Code1: The Hidden ",
+    "authors": [
+      "Charles Petzold"
+    ],
+    "publisher": "Microsoft Press; 1st edition",
+    "yop": 2000,
+    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
+    "format": "Ebook"
+  },
+  {
+    "id": "a02d3727-9ba0-464f-ba69-dd82cb050fec",
+    "name": "Code1: The Hidden",
+    "authors": [
+      "Charles Petzold"
+    ],
+    "publisher": "Microsoft Press; 1st edition",
+    "yop": 2000,
+    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
+    "format": "ebook",
+    "qtyy": 1
+  },
+  {
+    "id": "2230a965-c6a9-46f4-8d8f-90d77bd8cd2c",
+    "name": "lds;bknlf;lsd",
+    "authors": [
+      "Charles Petzold"
+    ],
+    "publisher": "Microsoft Press; 1st edition",
+    "yop": 2000,
+    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
+    "format": "ebook"
+  },
+  {
+    "id": "f164342e-64bf-4797-82e3-c24fc1e1cd37",
+    "name": "lds;bkndfnldslf;lsd",
+    "authors": [
+      "Charles Petzold",
+      1
+    ],
+    "publisher": "Microsoft Press; 1st edition",
+    "yop": 2000,
+    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
+    "format": "ebook"
+  },
+  {
+    "name": "lds;bkndfnldslf;lsdlndfds;f",
+    "authors": [
+      "Charles Petzold",
+      1
+    ],
+    "publisher": "Microsoft Press; 1st edition",
+    "yop": 2000,
+    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
+    "format": "ebook",
+    "id": "1fa7aff4-57fe-4eb3-9c87-a3249af54c07",
+    "qtyy": 1
   }
 ]

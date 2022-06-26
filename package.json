@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ritik-ongraph/book-comet-api#readme",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
