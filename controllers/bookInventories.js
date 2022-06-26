@@ -1,59 +1,51 @@
-
 const utils = require('../utils/utils');
 const _ = require('lodash');
 
-const modifyBookInventory = async(req,res,next) =>{
-    console.log("qty", req.body);console.log("qty", req.body);
+/* ==============================================================================================*/
+
+ // modify Book Inventory By Inventory Id - Inventory Id is required in req.params and  in req.body we will send Book qty that need to be modified.
+const modifyBookInventory = async (req, res) => {
     try {
+        let { booksModelData, booksInventoryModelData } = req.bookModelDetails;
         if (!req.params.id) {
-            throw new Error('Id is required');
+            throw new Error(' Inventory Id is required');
         }
         if (req.body && req.body.qty < 0) {
             throw new Error('Book Inventory cannot be negative');
         }
-        let booksInventoryModelData = await utils.getBooksInventoryData();
-        if ( !Array.isArray(booksInventoryModelData)) {
-            throw new Error('Error occour while fetching the data');
-        }
-
         let bookInventoryId = req.params.id;
-        
-        
-
         // check if id already exist in database
         let BookInventoryIndex = _.findIndex(booksInventoryModelData, { id: bookInventoryId });
         if (BookInventoryIndex == -1) {
             throw new Error(`Book inventory not found for id ${bookInventoryId}`)
         }
-        
-        if( req.body.bookId && booksInventoryModelData[BookInventoryIndex].BookId != req.body.bookId){
+        // Book Id is optional so if user trying to pass correct Inventory Id but incorrect Book.
+
+        if (req.body.bookId && booksInventoryModelData[BookInventoryIndex].BookId != req.body.bookId) {
             throw new Error('Book Id is incorrect');
         }
-
         let bookInventoriesItem = {
             "id": bookInventoryId,
             "qty": req.body.qty,
         }
-        booksInventoryModelData[BookInventoryIndex] = {...booksInventoryModelData[BookInventoryIndex],...bookInventoriesItem};
+        booksInventoryModelData[BookInventoryIndex] = { ...booksInventoryModelData[BookInventoryIndex], ...bookInventoriesItem };
         await utils.saveBookToInventory(booksInventoryModelData);
         res.status(200).json({ "status": "ok", "data": bookInventoriesItem });
     } catch (error) {
         res.status(400).json({ "status": "failed", "error": error.message });
     };
-    
 }
 
-const deleteBooksInventory = async(req,res,next) => {
+/* ==============================================================================================*/
+// Delete Book Inventory By Inventory Id - Book Id is required in req.params 
+
+const deleteBooksInventory = async (req, res) => {
     try {
+        let { booksModelData, booksInventoryModelData } = req.bookModelDetails;
         if (!req.params.id) {
             throw new Error('Book Id is required');
         }
-        let booksInventoryModelData = await utils.getBooksInventoryData();
-        if (!Array.isArray(booksInventoryModelData)) {
-            throw new Error('Error occour while fetching the data');
-        }
         let bookInventoryId = req.params.id;
-
         let BookInventoryIndex = _.findIndex(booksInventoryModelData, { id: bookInventoryId });
         if (BookInventoryIndex == -1) {
             throw new Error(`Book inventory not found for id ${bookInventoryId}`)
@@ -70,8 +62,7 @@ const deleteBooksInventory = async(req,res,next) => {
     }
 }
 
-module.exports ={
-    modifyBookInventory:modifyBookInventory,
-    deleteBooksInventory:deleteBooksInventory,
-
+module.exports = {
+    modifyBookInventory: modifyBookInventory,
+    deleteBooksInventory: deleteBooksInventory,
 }
