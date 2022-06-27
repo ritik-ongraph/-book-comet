@@ -1,169 +1,69 @@
 [
   {
-    "id": "1",
-    "name": "abc",
+    "name": "Structure and Interpretation of Computer Programs",
     "authors": [
-      "Charles Petzold"
+      "Harold Abelson",
+      "Gerald Jay",
+      "Julie Sussman"
     ],
-    "publisher": "publisher1",
-    "yop": 2000,
-    "summary": "summary1",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "1",
-    "name": "abcd",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "publisher1",
-    "yop": 2000,
-    "summary": "summary1",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "3495eb73-9732-4d6b-8a43-9a6a0372f5a1",
-    "name": "Code1: The Hidden Language of Computer Hardware and Software",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "915e42e2-7432-432f-933e-ef40eccdd5b1",
-    "name": "Code1: The Hidden Language of Computer Hardware and Software",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "49daf472-6e8e-4a71-aae8-b090d37fdaf1",
-    "name": "Code1: The Hidden Language of Computer Hardware and Software",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "4d1a3d47-401c-4c83-980f-d6d4d6ca1e78",
-    "name": "Code1: The Hidden Language of Computer Hardware and Software",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "7c8092bc-964e-4c07-8be8-9a0504d4781a",
-    "name": "Code1: The Hidden Language of Computer Hardware and Software",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "0ffcddcc-147c-4036-a501-b9906fc21e5b",
-    "name": "Code1: The Hidden Langukdgsdsdage of Computer Hardware and Software",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "0b2ce68c-1c9b-46a7-bf9a-e3e0c8117e93",
-    "name": "Code1: The Hidden Langukdgsdsdage of Computer Hardware and Software",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook",
-    "qty": 0
-  },
-  {
-    "id": "22d38613-af81-4d4c-974d-4fdd63942c46",
-    "name": "Code1: The Hidden ",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "Ebook"
-  },
-  {
-    "id": "a02d3727-9ba0-464f-ba69-dd82cb050fec",
-    "name": "Code1: The Hidden",
-    "authors": [
-      "Charles Petzold"
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
+    "publisher": "MIT Press",
+    "yop": 1984,
     "format": "ebook",
-    "qtyy": 1
+    "summary": "This computer science book was written by the faculty of Electrical Engineering and Computer Science Department at MIT, and it’s based on the curriculum they teach.\n\nAs you might expect from prestigious academic authors, it’s fairly dense content that you’ll need to dedicate some brainpower to! If you do, you’ll gain deep and valuable knowledge of programming systems and procedures.\n\n",
+    "id": "a2914ce5-4f47-4c1c-882b-52d1968f913c",
+    "qty": 20
   },
   {
-    "id": "2230a965-c6a9-46f4-8d8f-90d77bd8cd2c",
-    "name": "lds;bknlf;lsd",
+    "name": "Design Patterns: Elements of Reusable Object-Oriented Software",
     "authors": [
-      "Charles Petzold"
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
     ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "ebook"
-  },
-  {
-    "id": "f164342e-64bf-4797-82e3-c24fc1e1cd37",
-    "name": "lds;bkndfnldslf;lsd",
-    "authors": [
-      "Charles Petzold",
-      1
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
-    "format": "ebook"
-  },
-  {
-    "name": "lds;bkndfnldslf;lsdlndfds;f",
-    "authors": [
-      "Charles Petzold",
-      1
-    ],
-    "publisher": "Microsoft Press; 1st edition",
-    "yop": 2000,
-    "summary": "Code: The Hidden Language of Computer Hardware and Software is a unique exploration into bits, bytes, and the inner workings of computers.",
+    "publisher": "Addison-Wesley Professional",
+    "yop": 1994,
     "format": "ebook",
-    "id": "1fa7aff4-57fe-4eb3-9c87-a3249af54c07",
-    "qtyy": 1
+    "summary": "With an in-depth look at 23 different design patterns, this book will teach you how to create more flexible, elegant, and reusable programs. While the actual code written in the book might be outdated (it was published in 1994), it’s still one of the best coding books on object-oriented programming, as the concepts and approaches remain highly relevant even in 2022. ",
+    "id": "1dcd71da-8865-41d6-8a3b-ec67f161fc68",
+    "qty": 20
+  },
+  {
+    "name": "The Pragmatic Programmer: Your Journey to Mastery",
+    "authors": [
+      "Andrew Hunt",
+      "Thomas",
+      "David Thomas"
+    ],
+    "publisher": "Addison-Wesley Professional",
+    "yop": 2019,
+    "format": "epub",
+    "summary": "This programming book combines useful information with entertaining anecdotes and examples, divided into easy-to-follow self-contained sections. You’ll learn core processes that enable you to be a better programmer and produce flexible, efficient code. And you’ll get tips for honing your career skills in other ways, from work ethic to common pitfalls to avoid.",
+    "id": "5ccc8165-1e92-42dc-bad5-53dc756b426f",
+    "qty": 50
+  },
+  {
+    "name": "Algorithms to Live By: The Computer Science of Human Decisions",
+    "authors": [
+      "Brian Christian "
+    ],
+    "publisher": "Henry Holt and Co",
+    "yop": 2016,
+    "format": "ebook",
+    "summary": "One of the best algorithms books for those also interested in psychology, this computer coding book offers a unique look at how computer algorithms can be applied to our everyday lives — from finding a spouse to finding a parking spot. Read this if you want to learn about the history and evolution of algorithms or want to understand what algorithmic thinking is all about.",
+    "id": "641d1786-518d-4ffe-841f-8020df4691ab",
+    "qty": 50
+  },
+  {
+    "name": "Code Simplicity: The Fundamentals of Software",
+    "authors": [
+      "Max Kanat-Alexander"
+    ],
+    "publisher": "O'Reilly Media",
+    "yop": 2022,
+    "format": "paperback",
+    "summary": "This programming book for beginners is the “KISS” of coding—going over principles you can follow to make your code simple and efficient no matter what language you’re using. \n\nGood software development results in simple code. The coding book will show you how to “keep it simple, stupid!”\n\n",
+    "id": "7f22d254-d0b1-4313-bd6e-160ed8ec8a41",
+    "qty": 1
   }
 ]
