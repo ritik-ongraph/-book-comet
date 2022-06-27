@@ -6,6 +6,9 @@ const {getBookDetails} = require('../middleware/getBooksDetais');
 const authentication = require('../middleware/authenticationUser')
 
 router.get('/books',authentication.authenticate,getBookDetails,booksController.getAllBooks);
+router.get('/books/searchterm/',authentication.authenticate,getBookDetails,booksController.getBooksBySearch);
+
+router.get('/books/:id/',authentication.authenticate,getBookDetails,booksController.getBooksByID);
 router.get('/books/id/:id/name/:name',authentication.authenticate,getBookDetails,booksController.getBooksByIDName);
 router.get('/books/author/:author/publisher/:publisher',authentication.authenticate,getBookDetails,booksController.getBooksByAuthorsPublisher);
 router.post('/books',authentication.authenticate,booksValidators.BookValidation,getBookDetails,booksController.addBooks); 

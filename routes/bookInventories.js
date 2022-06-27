@@ -6,7 +6,7 @@ const authentication = require('../middleware/authenticationUser')
 const bookInventoriesController = require('../controllers/bookInventories');
 const {getBookDetails} = require('../middleware/getBooksDetais');
 
-
+router.patch('/books/inventory/bookid/:id',authentication.authenticate,bookInventoriesValidators.BookInventoriesValidation,getBookDetails,bookInventoriesController.modifyBookInventoryByBookId);
 router.patch('/books/inventory/:id',authentication.authenticate,bookInventoriesValidators.BookInventoriesValidation,getBookDetails,bookInventoriesController.modifyBookInventory);
 router.delete('/books/inventory/:id',authentication.authenticate,getBookDetails,bookInventoriesController.deleteBooksInventory);
 

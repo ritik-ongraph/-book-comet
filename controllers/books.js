@@ -26,7 +26,7 @@ const addBooks = async (req, res) => {
         // We are setting quantity to 0 if req.body don't have quantity however we have kept qty as required field in schema validation.
         let qty = req.body.qty || 0;
 
-        let bookItem = req.body;
+        let bookItem = {...req.body};
            bookItem.id = uuid();
         // When we create book item we have to save Book qty to book inventory collection.
         let bookInventoriesItem = {
@@ -71,7 +71,7 @@ const getBooksByAuthorsPublisher = async (req, res) => {
         let matchCondition = { author: req.params.author, publisher: req.params.publisher }
         let result = _.filter(booksModelData, (bookItem) => {
         // Find author and  publisher 
-        return (_.includes(bookItem.publisher, matchCondition.publisher) && _.includes(bookItem.authors, matchCondition.author)
+        return (_.includes(bookItem.publisher, matchCondition.publisher) && _.includes(bookItem.authors.toLowerCase(), matchCondition.author.toLowerCase())
         )
         });
         res.status(200).json({ "status": "ok", "data": result });
@@ -80,8 +80,80 @@ const getBooksByAuthorsPublisher = async (req, res) => {
     }
 }
 
+
 /* ==============================================================================================*/
 
+
+// Get Book By Book Id - Both id required
+const getBooksByID = async (req, res) => {
+    // FUll text search implemented on name field (Book Title) so only if part of name is given it will search with it.
+    try {
+        let  {booksModelData, booksInventoryModelData}  = req.bookModelDetails;
+
+        if (!req.params.id) {
+            throw new Error('Both ID Required to search');
+        }
+        
+        let matchCondition = { id: req.params.id }
+        
+        let result = _.filter(booksModelData, (bookItem) => {
+            return (bookItem.id == matchCondition.id
+            )
+        });
+        res.status(200).json({ "status": "ok", "data": result });
+    } catch (error) {
+        res.status(400).json({ "status": "Failed", "message": error });
+    }
+}
+
+
+
+
+/* ==============================================================================================*/
+
+// Get Book By Book Query Search - It can search by id,name,publisher and authors
+
+const getBooksBySearch=async(req,res)=>{
+console.log("search ",req.query);
+try{
+    let  {booksModelData, booksInventoryModelData}  = req.bookModelDetails;
+
+  let search =  _.keys(req.query);
+  let searchData = {...req.query};
+    let filteredData = [...booksModelData];
+    console.log("search query",search);
+    if(_.includes(search,'id')){
+        console.log("id")
+     filteredData =_.filter(filteredData,{'id':searchData.id});
+     console.log(filteredData);
+    }
+    if(_.includes(search,'publisher')){
+        console.log('publisher');
+        console.log(filteredData)
+        filteredData =_.filter(filteredData,{'publisher':searchData.publisher});
+        console.log(filteredData)
+
+    }
+    if(_.includes(search,'name')){
+        filteredData =_.filter(filteredData,(bookItem)=>{
+        return (_.includes(bookItem.name.toLowerCase(), searchData.name.toLowerCase()))
+        });
+    }
+    if(_.includes(search,'authors')){
+        filteredData =_.filter(filteredData,(bookItem)=>{
+        return (  _.includes(bookItem.authors, searchData.authors))
+        });
+    }
+    let result = [...filteredData];
+    res.status(200).json({ "status": "ok", "data": result });
+
+}catch(error){
+    res.status(400).json({ "status": "Failed", "message": error.message });
+
+}
+
+} 
+/* ==============================================================================================*/
 
 // Get Book By Book Id and Name  - Both id and name are required
 const getBooksByIDName = async (req, res) => {
@@ -122,7 +194,7 @@ const updateBooks = async (req, res) => {
 
         // If someone send wrong Book Id in req.body and but correct id in req.params so we will fetch book from req.params and update the document by setting the correct id;
         // User should not be able to update bookId by passing it to payload.
-        let bookItem = req.body;
+        let bookItem = {...req.body};
         bookItem.id = req.params.id;
         delete bookItem.qty;
 
@@ -172,7 +244,7 @@ const modifyBooks = async (req, res) => {
         // If someone send wrong Book Id in req.body and but correct id in req.params so we will fetch book from req.params and modify the document by setting the correct id;
         // User should not be able to update bookId by passing it to payload.
 
-        let bookItem = req.body;
+        let bookItem =  {...req.body};
         bookItem.id = req.params.id;
         // Book qty not needed in Books collection
         delete bookItem.qty;
@@ -252,7 +324,9 @@ const deleteBooks = async (req, res) => {
 
 module.exports = {
     getAllBooks: getAllBooks,
+    getBooksBySearch:getBooksBySearch,
     addBooks: addBooks,
+    getBooksByID:getBooksByID,
     getBooksByIDName: getBooksByIDName,
     getBooksByAuthorsPublisher: getBooksByAuthorsPublisher,
     updateBooks: updateBooks,

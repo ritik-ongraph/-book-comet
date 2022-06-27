@@ -36,6 +36,40 @@ const modifyBookInventory = async (req, res) => {
     };
 }
 
+
+/* ==============================================================================================*/
+
+ // modify Book Inventory By Book Id - Book Id is required in req.params and  in req.body we will send Book qty that need to be modified.
+
+const modifyBookInventoryByBookId = async(req,res) =>{
+    console.log('modify book quantity',req.params.id)
+    try {
+        let { booksModelData, booksInventoryModelData } = req.bookModelDetails;
+        if (!req.params.id) {
+            throw new Error(' Inventory Id is required');
+        }
+        if (req.body && req.body.qty < 0) {
+            throw new Error('Book Inventory cannot be negative');
+        }
+        let bookItemId = req.params.id;
+        // check if id already exist in database
+        let BookInventoryIndex = _.findIndex(booksInventoryModelData, { bookId: bookItemId });
+        if (BookInventoryIndex == -1) {
+            throw new Error(`Book inventory not found for Book id ${bookItemId}`)
+        }
+
+        
+        let bookInventoriesItem = {
+            "qty": req.body.qty,
+        }
+        booksInventoryModelData[BookInventoryIndex] = { ...booksInventoryModelData[BookInventoryIndex], ...bookInventoriesItem };
+        await utils.saveBookToInventory(booksInventoryModelData);
+        res.status(200).json({ "status": "ok", "data": bookInventoriesItem });
+    } catch (error) {
+        res.status(400).json({ "status": "failed", "error": error.message });
+    };
+}
+
 /* ==============================================================================================*/
 // Delete Book Inventory By Inventory Id - Book Id is required in req.params 
 
@@ -63,6 +97,8 @@ const deleteBooksInventory = async (req, res) => {
 }
 
 module.exports = {
+    modifyBookInventoryByBookId:modifyBookInventoryByBookId,
+
     modifyBookInventory: modifyBookInventory,
     deleteBooksInventory: deleteBooksInventory,
 }

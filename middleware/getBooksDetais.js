@@ -22,9 +22,6 @@ const getBookDetails = async(req, res, next) => {
         }
 
         req.bookModelDetails = bookModelDetails;
-        console.log(req.body);
-        console.log(req.bookModelDetails);
-
         next();
 
     } catch (error) {
