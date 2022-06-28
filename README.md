@@ -42,10 +42,7 @@ you can also use nodemon
   npm start
 ```
 
-
-
-
-
+By default it will run on PORT 3000
 
 ## API Reference
 
@@ -67,19 +64,8 @@ In our [angular application](https://github.com/ritik-ongraph/book-comet-fronten
   GET /api/v1/books
 
 ```
+
 It returns all the books
-
-#### Get item
-
-```http
-
-  GET /api/v1/books{id}
-
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
 
 
 
