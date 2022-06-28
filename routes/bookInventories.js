@@ -4,7 +4,7 @@ const bookInventoriesValidators = require('../validators/bookInventories/booksIn
 const authentication = require('../middleware/authenticationUser')
 
 const bookInventoriesController = require('../controllers/bookInventories');
-const {getBookDetails} = require('../middleware/getBooksDetais');
+const {getBookDetails} = require('../middleware/getBooksDetails');
 
 router.patch('/books/inventory/bookid/:id',authentication.authenticate,bookInventoriesValidators.BookInventoriesValidation,getBookDetails,bookInventoriesController.modifyBookInventoryByBookId);
 router.patch('/books/inventory/:id',authentication.authenticate,bookInventoriesValidators.BookInventoriesValidation,getBookDetails,bookInventoriesController.modifyBookInventory);

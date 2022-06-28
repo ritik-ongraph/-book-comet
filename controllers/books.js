@@ -232,7 +232,7 @@ const updateBooks = async (req, res) => {
  // modify Book By Book Id - Book Id is required in req.params and in req.body we send fields that need to be modified.
 const modifyBooks = async (req, res) => {
     try {
-
+        console.log("bookModelDetails",req.bookModelDetails);
         let  {booksModelData, booksInventoryModelData}  = req.bookModelDetails;
 
         if (!req.params.id) {
@@ -276,6 +276,7 @@ const modifyBooks = async (req, res) => {
             "qty": qty,
         }
         booksInventoryModelData[BookInventoryIndex] = bookInventoriesItem;
+        console.log('save ')
         await utils.saveBookData(booksModelData);
         await utils.saveBookToInventory(booksInventoryModelData);
         res.status(200).json({ "status": "ok", "data": bookItem });

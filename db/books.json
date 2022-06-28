@@ -10,8 +10,7 @@
     "yop": 1984,
     "format": "ebook",
     "summary": "This computer science book was written by the faculty of Electrical Engineering and Computer Science Department at MIT, and it’s based on the curriculum they teach.\n\nAs you might expect from prestigious academic authors, it’s fairly dense content that you’ll need to dedicate some brainpower to! If you do, you’ll gain deep and valuable knowledge of programming systems and procedures.\n\n",
-    "id": "a2914ce5-4f47-4c1c-882b-52d1968f913c",
-    "qty": 20
+    "id": "a2914ce5-4f47-4c1c-882b-52d1968f913c"
   },
   {
     "name": "Design Patterns: Elements of Reusable Object-Oriented Software",
@@ -25,8 +24,7 @@
     "yop": 1994,
     "format": "ebook",
     "summary": "With an in-depth look at 23 different design patterns, this book will teach you how to create more flexible, elegant, and reusable programs. While the actual code written in the book might be outdated (it was published in 1994), it’s still one of the best coding books on object-oriented programming, as the concepts and approaches remain highly relevant even in 2022. ",
-    "id": "1dcd71da-8865-41d6-8a3b-ec67f161fc68",
-    "qty": 20
+    "id": "1dcd71da-8865-41d6-8a3b-ec67f161fc68"
   },
   {
     "name": "The Pragmatic Programmer: Your Journey to Mastery",
@@ -39,8 +37,7 @@
     "yop": 2019,
     "format": "epub",
     "summary": "This programming book combines useful information with entertaining anecdotes and examples, divided into easy-to-follow self-contained sections. You’ll learn core processes that enable you to be a better programmer and produce flexible, efficient code. And you’ll get tips for honing your career skills in other ways, from work ethic to common pitfalls to avoid.",
-    "id": "5ccc8165-1e92-42dc-bad5-53dc756b426f",
-    "qty": 50
+    "id": "5ccc8165-1e92-42dc-bad5-53dc756b426f"
   },
   {
     "name": "Algorithms to Live By: The Computer Science of Human Decisions",
@@ -51,19 +48,6 @@
     "yop": 2016,
     "format": "ebook",
     "summary": "One of the best algorithms books for those also interested in psychology, this computer coding book offers a unique look at how computer algorithms can be applied to our everyday lives — from finding a spouse to finding a parking spot. Read this if you want to learn about the history and evolution of algorithms or want to understand what algorithmic thinking is all about.",
-    "id": "641d1786-518d-4ffe-841f-8020df4691ab",
-    "qty": 50
-  },
-  {
-    "name": "Code Simplicity: The Fundamentals of Software",
-    "authors": [
-      "Max Kanat-Alexander"
-    ],
-    "publisher": "O'Reilly Media",
-    "yop": 2022,
-    "format": "paperback",
-    "summary": "This programming book for beginners is the “KISS” of coding—going over principles you can follow to make your code simple and efficient no matter what language you’re using. \n\nGood software development results in simple code. The coding book will show you how to “keep it simple, stupid!”\n\n",
-    "id": "7f22d254-d0b1-4313-bd6e-160ed8ec8a41",
-    "qty": 1
+    "id": "641d1786-518d-4ffe-841f-8020df4691ab"
   }
 ]

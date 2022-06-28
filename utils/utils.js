@@ -1,10 +1,19 @@
 const fs = require('fs');
 
 const path = require("path");
+const _ = require('lodash');
+
 // It save Books Data to file
 const saveBookData = (data) => {
     return new Promise((resolve,reject)=>{
        try {
+        // Remove Book Quantity from saving in Books collection.
+         data = _.map(data, (bookItem) => {
+        return  _.omit(bookItem,'qty');
+        });
+       
+        console.log("save data",data);
+        
         const stringifyData = JSON.stringify(data,null,2);
         fs.writeFileSync(path.resolve(__dirname, '../db/books.json'), stringifyData, 'utf8');
         resolve("Data added succesfully");
