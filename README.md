@@ -62,14 +62,18 @@ In our [angular application](https://github.com/ritik-ongraph/book-comet-fronten
 #### Get all items
 
 ```http
+
   GET /api/v1/books
+
 ```
 It returns all the books
 
 #### Get item
 
 ```http
+
   GET /api/v1/books{id}
+
 ```
 
 | Parameter | Type     | Description                       |
@@ -81,7 +85,9 @@ It returns all the books
 #### Get Book By Book Name and Book Id
 
 ```http
+
 GET /api/v1/books/id/{id}/name/{name}
+
 ```
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -90,7 +96,9 @@ GET /api/v1/books/id/{id}/name/{name}
 
 ### Get Book by Author and Publisher
 ```http
+
 GET /api/v1/books/id/{id}/name/{name}
+
 ```
 | Parameter   | Type     | Description                                 |
 | :--------   | :------- | :--------------------------------           |
@@ -101,7 +109,9 @@ GET /api/v1/books/id/{id}/name/{name}
 ### Get Book By Searchterm
 
 ```http
+
 GET /api/v1/books/searchterm/
+
 ```
 
 | Query String Parameter   | Type     | Description                                 |
@@ -116,7 +126,9 @@ GET /api/v1/books/searchterm/
 ### Get Book By Id
 
 ```http
+
 GET /api/v1/books/{id}
+
 ```
 
 
@@ -129,7 +141,9 @@ GET /api/v1/books/{id}
 ### POST Add New Book
 
 ```http
-POST /api/v1/books/
+
+POST /api/v1/books
+
 ```
 
 
@@ -147,7 +161,9 @@ POST /api/v1/books/
 ### PUT Update All field of Book
 
 ```http
+
 PUT /api/v1/books/{id}
+
 ```
 
 
@@ -165,7 +181,9 @@ PUT /api/v1/books/{id}
 ### Patch Update field of Book
 
 ```http
+
 PATCH /api/v1/books/{id}
+
 ```
 
 
@@ -183,7 +201,9 @@ PATCH /api/v1/books/{id}
 ### DELETE  All field of Book
 
 ```http
-DELETE /api/v1/books/{id}
+
+DELETE  /api/v1/books/{id}
+
 ```
 ### Note : -
 you can not delete book that has positive inventory.
