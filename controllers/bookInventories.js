@@ -42,7 +42,7 @@ const modifyBookInventory = async (req, res) => {
  // modify Book Inventory By Book Id - Book Id is required in req.params and  in req.body we will send Book qty that need to be modified.
 
 const modifyBookInventoryByBookId = async(req,res) =>{
-    console.log('modify book quantity',req.params.id)
+    
     try {
         let { booksModelData, booksInventoryModelData } = req.bookModelDetails;
         if (!req.params.id) {
@@ -98,7 +98,6 @@ const deleteBooksInventory = async (req, res) => {
 
 module.exports = {
     modifyBookInventoryByBookId:modifyBookInventoryByBookId,
-
     modifyBookInventory: modifyBookInventory,
     deleteBooksInventory: deleteBooksInventory,
 }

@@ -48,9 +48,9 @@ const addBooks = async (req, res) => {
         await utils.saveBookData(booksModelData);
         booksInventoryModelData.push(bookInventoriesItem)
         await utils.saveBookToInventory(booksInventoryModelData);
-
         res.status(200).json({ "status": "ok", "message":"Book Item Added successfully", "data": bookItem });
     } catch (error) {
+        
         res.status(400).json({ "status": "failed", "error": error.message });
     };
 }
@@ -60,7 +60,6 @@ const addBooks = async (req, res) => {
 // Get Books By Authors and Publisher  - autjours and publisher name is required
 const getBooksByAuthorsPublisher = async (req, res) => {
     // Books can have more then 1 author so even if any 1 author match with publisher then it will fetch it 
-
     try {
         let  {booksModelData, booksInventoryModelData}  = req.bookModelDetails;
 
@@ -102,7 +101,7 @@ const getBooksByID = async (req, res) => {
         });
         res.status(200).json({ "status": "ok", "data": result });
     } catch (error) {
-        res.status(400).json({ "status": "Failed", "message": error });
+        res.status(400).json({ "status": "Failed", "message": error.message });
     }
 }
 
@@ -114,25 +113,19 @@ const getBooksByID = async (req, res) => {
 // Get Book By Book Query Search - It can search by id,name,publisher and authors
 
 const getBooksBySearch=async(req,res)=>{
-console.log("search ",req.query);
+
 try{
     let  {booksModelData, booksInventoryModelData}  = req.bookModelDetails;
 
   let search =  _.keys(req.query);
   let searchData = {...req.query};
-    let filteredData = [...booksModelData];
-    console.log("search query",search);
+  let filteredData = [...booksModelData];
+    
     if(_.includes(search,'id')){
-        console.log("id")
-     filteredData =_.filter(filteredData,{'id':searchData.id});
-     console.log(filteredData);
-    }
+        filteredData =_.filter(filteredData,{'id':searchData.id});
+     }
     if(_.includes(search,'publisher')){
-        console.log('publisher');
-        console.log(filteredData)
         filteredData =_.filter(filteredData,{'publisher':searchData.publisher});
-        console.log(filteredData)
-
     }
     if(_.includes(search,'name')){
         filteredData =_.filter(filteredData,(bookItem)=>{
@@ -173,7 +166,7 @@ const getBooksByIDName = async (req, res) => {
         });
         res.status(200).json({ "status": "ok", "data": result });
     } catch (error) {
-        res.status(400).json({ "status": "Failed", "message": error });
+        res.status(400).json({ "status": "Failed", "message": error.message });
     }
 }
 
@@ -232,7 +225,6 @@ const updateBooks = async (req, res) => {
  // modify Book By Book Id - Book Id is required in req.params and in req.body we send fields that need to be modified.
 const modifyBooks = async (req, res) => {
     try {
-        console.log("bookModelDetails",req.bookModelDetails);
         let  {booksModelData, booksInventoryModelData}  = req.bookModelDetails;
 
         if (!req.params.id) {
@@ -276,7 +268,7 @@ const modifyBooks = async (req, res) => {
             "qty": qty,
         }
         booksInventoryModelData[BookInventoryIndex] = bookInventoriesItem;
-        console.log('save ')
+       
         await utils.saveBookData(booksModelData);
         await utils.saveBookToInventory(booksInventoryModelData);
         res.status(200).json({ "status": "ok", "data": bookItem });

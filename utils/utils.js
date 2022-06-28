@@ -11,10 +11,7 @@ const saveBookData = (data) => {
          data = _.map(data, (bookItem) => {
         return  _.omit(bookItem,'qty');
         });
-       
-        console.log("save data",data);
-        
-        const stringifyData = JSON.stringify(data,null,2);
+       const stringifyData = JSON.stringify(data,null,2);
         fs.writeFileSync(path.resolve(__dirname, '../db/books.json'), stringifyData, 'utf8');
         resolve("Data added succesfully");
         } catch(error) {
@@ -52,7 +49,7 @@ return new Promise((resolve,reject)=>{
    
         } else {
         // If file is empty or invalid JSON or some other error occour.
-        console.log('Error in getBookData function',error);
+        console.log('Error in getting Books',error);
         reject({"error":true,"message":"Error occour while reading from database check Database connection or in memory database file"})
         }}
 })
@@ -68,8 +65,7 @@ return new Promise((resolve,reject)=>{
 //get the Book Inventory data from json file
 const getBooksInventoryData = () => {
     return new Promise((resolve,reject)=>{
-        console.log("getBookData");
-        try {
+       try {
             const jsonData = fs.readFileSync(path.resolve(__dirname, '../db/bookInventories.json'),'utf-8');
             let booksModelData = JSON.parse(jsonData);
             resolve(booksModelData);
@@ -81,7 +77,7 @@ const getBooksInventoryData = () => {
        
             } else {
             // If file is empty or invalid JSON or some other error occour.
-            console.log('Error in getBookData function',error);
+            console.log('Error in getting Inventory',error);
             reject({"error":true,"message":"Error occour while reading from database check Database connection or in memory database file"})
             }}
     })

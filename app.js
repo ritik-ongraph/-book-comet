@@ -30,10 +30,6 @@ app.use('*', ((req, res)=>{
 res.status(404).json({"error":404,"message":"Please check api endpoints"})
 }) );
 
-
-
-
-
 app.listen(PORT, (error) =>{
 if(!error)
 console.log("Server is Successfully Running, and App is listening on port "+ PORT)

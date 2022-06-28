@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const bookInventoriesValidators = require('../validators/bookInventories/booksInventoriesValidators');
 const authentication = require('../middleware/authenticationUser')
-
 const bookInventoriesController = require('../controllers/bookInventories');
 const {getBookDetails} = require('../middleware/getBooksDetails');
 
