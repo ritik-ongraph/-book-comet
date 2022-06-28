@@ -65,7 +65,7 @@ In our [angular application](https://github.com/ritik-ongraph/book-comet-fronten
 
 ```
 
-It returns all the books
+#### It returns all the books
 
 
 
@@ -225,11 +225,12 @@ PATCH /api/v1/books/inventory/{id}
 
 ### Note: -
 
-you can not set negative book inventory 
+#### you can not set negative book inventory 
 
 
 ```http
- Delete /api/v1/books/inventory/{id}
+ DELETE /api/v1/books/inventory/{id}
+
 ```
 |  Query Parameter    |         Type                    | Description                                  |
 | :------------------ | :-----------------------------  | :--------------------------------            |                                           
